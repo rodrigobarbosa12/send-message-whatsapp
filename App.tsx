@@ -1,5 +1,6 @@
 import React, { useState, ReactElement } from 'react'
-import { Linking, Button, Image, Alert } from 'react-native';
+import { Linking, Button, Image, Alert, StyleSheet } from 'react-native';
+import { TextInputMask } from 'react-native-masked-text';
 import {
   Container,
   Form,
@@ -7,17 +8,35 @@ import {
 } from './styles';
 import Logo from './images/whats.png';
 
+const styles = StyleSheet.create({
+  input: {
+    height: 50,
+    width: '75%',
+    marginLeft: 15,
+    marginRight: 30,
+    fontSize: 15,
+    color: '#fff',
+  },
+});
+
 const App = (): ReactElement => {
   const [message, setMassage] = useState<string | null>('Olá');
-  const [number, setNumber] = useState<string | null>(null);
+  const [number, setNumber] = useState<string>('');
 
   const openWhatsapp = async () => {
     if (!number) {
       Alert.alert('Atenção', 'O número é obrigatório');
-      return
+      return;
+    }
+    
+    const numberWithoutMask = number.replace(/\D/gim, '');
+
+    if (numberWithoutMask.length < 10) {
+      Alert.alert('Atenção', 'Por favor digite um número válido');
+      return;
     }
 
-    Linking.openURL(`whatsapp://send?text=${message}&phone=+${number}`);
+    Linking.openURL(`whatsapp://send?text=${message}&phone=+55${numberWithoutMask}`);
   };
 
   return (
@@ -32,14 +51,19 @@ const App = (): ReactElement => {
           onChangeText={(value: string) => setMassage(value)}
         />
 
-        <FormInput
-          icon="phone"
-          keyboardType="number-pad"
-          placeholder="Ex: 5511912345678"
+        <TextInputMask
+          style={styles.input}
+          type="cel-phone"
+          options={{
+            maskType: 'BRL',
+            withDDD: true,
+            dddMask: '(99) ',
+          }}
+          value={number}
+          placeholder="Ex: (11) 91234-5678"
           placeholderTextColor="#999"
           onChangeText={(value: string) => setNumber(value)}
         />
-
         <Button
           title="Enviar"
           onPress={openWhatsapp}
