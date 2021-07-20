@@ -1,8 +1,8 @@
 import { Platform } from 'react-native';
 import styled from 'styled-components/native';
 
-import Input from '../components/Input';
-import InputPhone from '../components/InputPhone';
+import Input from './components/Input';
+import InputPhone from './components/InputPhone';
 
 export const Container = styled.KeyboardAvoidingView.attrs({
   behavior: Platform.OS === 'ios' ? 'padding' : 'height',
@@ -11,7 +11,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  background-color: #000
+  background-color: #000;
 `;
 
 export const Form = styled.View`

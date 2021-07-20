@@ -1,11 +1,13 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { forwardRef } from 'react';
+import { StyleProp } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Container, InputPhoneStylezed } from './styles';
 
 interface Props {
-  style: any;
-  icon: any;
-  [x: string]: any
+  style: StyleProp<any>;
+  icon: string;
+  [x: string]: any;
 }
 
 function InputPhone({ style, icon, ...rest }: Props, ref: any) {

@@ -1,12 +1,17 @@
-import React, { useState, ReactElement } from 'react'
-import { Linking, Button, Image, Alert } from 'react-native';
+import React, { useState, ReactElement } from 'react';
+import {
+  Linking,
+  Button,
+  Image,
+  Alert,
+} from 'react-native';
 import {
   Container,
   Form,
   FormInput,
   InputMaskPhone,
 } from './styles';
-import Logo from '../images/whats.png';
+import Logo from './images/whats.png';
 
 const SendMessageToNumber = (): ReactElement => {
   const [message, setMassage] = useState<string | null>('Olá');
@@ -17,7 +22,7 @@ const SendMessageToNumber = (): ReactElement => {
       Alert.alert('Atenção', 'O número é obrigatório');
       return;
     }
-    
+
     const numberWithoutMask = number.replace(/\D/gim, '');
 
     if (numberWithoutMask.length < 10) {
