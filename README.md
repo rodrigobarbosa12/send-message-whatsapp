@@ -1,18 +1,16 @@
 <h1 align="center">
-    <img 
-      alt="Max coletor" 
-      title="Max coletor" 
-      width="500"
-      src="src/images/logo-864x256.png" 
-    />
+    <p align="center">
+      <img src="assets/to-headme/splash.png" width="194" title="Splash">
+      <img src="assets/to-headme/home.png" width="199" title="Home">
+    </p>
 </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-bibliotecas">Bibliotecas</a>
+  <a href="#-bibliotecas">Bibliotecas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-desenvolvimento">Desenvolvimento</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalação">Instalação</a>
 </p>
 
 
@@ -21,37 +19,29 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React Native](https://reactnative.dev/)
-- [React Navigation](https://reactnavigation.org/)
 - [Expo](https://docs.expo.io/)
 
 
 ## 💻 Projeto
 
-Força mobile 💜
-
-
-## 🎨 Layout
-
-No link abaixo você encontra o layout do projeto mobile.
-
-- [React Native paper](https://callstack.github.io/react-native-paper/)
-- [Icons Expo](https://expo.github.io/vector-icons/)
+O Send message te possibilita enviar mensagens no Whatsapp sem que você precise salvar em seus contatos 💜
 
 
 ## 📚 Bibliotecas
 
-- [Moment](https://momentjs.com/)
-- [FileSystem](https://docs.expo.io/versions/latest/sdk/filesystem/#filesystemreadasstringasyncfileuri-options)
+- [Styled components](https://styled-components.com)
+- [Masked text](https://www.npmjs.com/package/react-native-masked-text)
 
 ## Desenvolvimento
 
-- [TypeScript](https://www.typescriptlang.org/)
+- [Yarn](https://yarnpkg.com)
+- [TypeScript](https://www.typescriptlang.org)
 - [Eslint](https://www.npmjs.com/package/eslint)
 
 ## 🧩 Instalação
 
 ### Baixe o projeto
-    $ git clone git@gitlab.com:rodrigo.barbosa12/forca-mobile.git
+    $ git clone https://github.com/rodrigobarbosa12/send-message-whatsapp.git
 
 ### Instale todas as dependências
     $ yarn
@@ -79,4 +69,4 @@ No link abaixo você encontra o layout do projeto mobile.
 
 [![Github Badge](https://img.shields.io/github/followers/rodrigobarbosa12?style=social&link=https://github.com/rodrigobarbosa12)](https://github.com/rodrigobarbosa12)
 
-Feito com 💙 by Maxscalla.
+< Feito com 💙 />
