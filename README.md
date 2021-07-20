@@ -32,7 +32,7 @@ O Send message te possibilita enviar mensagens no Whatsapp sem que você precise
 - [Styled components](https://styled-components.com)
 - [Masked text](https://www.npmjs.com/package/react-native-masked-text)
 
-## Desenvolvimento
+## 👩‍💻 Desenvolvimento
 
 - [Yarn](https://yarnpkg.com)
 - [TypeScript](https://www.typescriptlang.org)
